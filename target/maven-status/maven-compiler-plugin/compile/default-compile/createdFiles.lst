@@ -1,0 +1,6 @@
+org/kshitiz/hadoop/AvgStocker$AvgStockVolumeMapper.class
+org/kshitiz/hadoop/AvgStocker.class
+org/kshitiz/hadoop/WordCounter$IntSumReducer.class
+org/kshitiz/hadoop/AvgStocker$AvgStockVolumeReducer.class
+org/kshitiz/hadoop/WordCounter.class
+org/kshitiz/hadoop/WordCounter$TokenizerMapper.class
