@@ -14,7 +14,7 @@ import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
-public class AvgStocker {
+public class AvgStockVolumeCalculator{
 
 	public static class AvgStockVolumeMapper extends
 			Mapper<Object, Text, Text, DoubleWritable> {
@@ -52,7 +52,7 @@ public class AvgStocker {
 
 	public static void main(String[] args) throws Exception {
 		Job job = Job.getInstance(new Configuration(), "word count");
-		job.setJarByClass(AvgStocker.class);
+		job.setJarByClass(AvgStockVolumeCalculator.class);
 		job.setMapperClass(AvgStockVolumeMapper.class);
 		//job.setCombinerClass(AvgStockVolumeReducer.class);
 		job.setReducerClass(AvgStockVolumeReducer.class);
