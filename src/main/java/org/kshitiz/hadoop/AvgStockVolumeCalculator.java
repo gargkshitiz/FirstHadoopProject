@@ -34,19 +34,16 @@ public class AvgStockVolumeCalculator{
 
 	public static class AvgStockVolumeReducer extends
 			Reducer<Text, DoubleWritable, Text, DoubleWritable> {
-		private DoubleWritable avgStockVolume = new DoubleWritable();
-
 		@Override
 		public void reduce(Text key, Iterable<DoubleWritable> values,
 				Context context) throws IOException, InterruptedException {
-			double sum = 0d;
-			double noOfValuesWithAKey = 1d;
+			double sum = 0;
+			int noOfValuesWithAKey = 1;
 			for (DoubleWritable val : values) {
 				sum += val.get();
 				noOfValuesWithAKey++;
 			}
-			avgStockVolume.set(sum/noOfValuesWithAKey);
-			context.write(key, avgStockVolume);
+			context.write(key, new DoubleWritable(sum/noOfValuesWithAKey));
 		}
 	}
 

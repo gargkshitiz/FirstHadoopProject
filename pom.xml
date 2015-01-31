@@ -15,7 +15,7 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<start-class>org.kshitiz.hadoop.WordCounter</start-class>
+		<start-class>org.kshitiz.hadoop.AvgStockVolumeCalculator</start-class>
 		<java.version>1.7</java.version>
 	</properties>
 
